@@ -1,4 +1,4 @@
-# Questions and options
+# Questions and options in list form
 questions = [
     ("Which is a correct way to create a list?", ["A) [1,2,3]", "B) (1,2,3)", "C) {1,2,3}", "D) \"1,2,3\""], "A"),
     ("Which is immutable?", ["A) List", "B) Tuple", "C) Set", "D) Dictionary"], "B"),
@@ -7,10 +7,10 @@ questions = [
     ("How to add 10 to s={1,2,3}?", ["A) add(10)", "B) append(10)", "C) insert(10)", "D) [10]=10"], "A")
 ]
 
-# User data
+# User information
 user = {"name": input("Enter your name: "), "score": 0, "answers": {}}
 
-# Quiz loop
+# Quiz loop with question number and option
 for idx, (question, options, correct) in enumerate(questions):
     print(f"\nQ{idx+1}: {question}")
     for opt in options:
@@ -30,7 +30,7 @@ for idx, (question, options, correct) in enumerate(questions):
     if answer == correct:
         user["score"] += 1
 
-# Show results
+# Show results and correct answer
 print("\nQuiz Over!")
 print(f"{user['name']}, your score is: {user['score']}/{len(questions)}")
 print("Your answers vs Correct answers:")
