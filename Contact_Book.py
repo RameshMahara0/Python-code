@@ -21,20 +21,19 @@ def search_contact(keyword):
 # Display all contacts
 def display_contacts():
     if not contacts:
-        print("📂 Contact list is EMPTY")
+        print("Sorry! Contact list is EMPTY")
     else:
-        print("\n📋 All Contacts:")
+        print("\n All Contacts:")
         print("----------------------")
         for num, c in enumerate(contacts, start=1):
             print(f"{num}. {c['name']} || {c['phone']} || {c['email']}")
 
-# Show unique email domains
+# Unique email domains
 def show_unique_domains():
     print("\n🌐 Unique Email Domains:")
     for domain in email_domain:
         print(f"- {domain}")
-
-# Main menu
+# Option for user
 while True:
     print("\n==== CONTACT BOOK MANAGER ====")
     print("1. Add Contact")
@@ -64,6 +63,6 @@ while True:
     elif choice == "5":
         print("👋 Exiting Contact Book. Goodbye!")
         break
-
+# Defult result
     else:
         print("❌ Invalid choice! Please try again.")
