@@ -47,7 +47,7 @@ while True:
     if score <= 3:
         print("Too Weak Password!")
         password_feedback(password)
-        print("Please enter a stronger password.\n")
+        print("Please Enter a stronger password....\n")
         continue
     elif score == 4:
         print("MEDIUM Password")
