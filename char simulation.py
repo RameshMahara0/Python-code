@@ -1,18 +1,18 @@
 
 
 messages = []   
-bad_words = {"stupid", "idiot", "badword", "donkey"} 
+bad_words = {"stupid", "idiot", "badword", "donkey"} #Word to filter
 user_messages = {}  
 unique_users = set()  
 
-
+#Function to filter bad word with ******
 def filter_message(msg):
     for word in bad_words:
         if word.lower() in msg.lower():
             msg = msg.replace(word, "***")  
     return msg
 
-
+# Function to send message
 def send_message(user, msg):
     msg = filter_message(msg)
     messages.append(f"{user}: {msg}") 
@@ -24,13 +24,13 @@ def send_message(user, msg):
 
 
 def show_chat():
-    print("\n📜 Chat History:")
+    print("\nChat History:")
     for m in messages:
         print(m)
 
 
 def show_users():
-    print("\n👥 Users in Chat:")
+    print("\n Users in Chat:")
     for u in unique_users:
         print(f"- {u}")
 
@@ -44,7 +44,7 @@ def show_user_messages(user):
         print(f"❌ No messages from {user}")
 
 
-
+#--------------MAIN-------------
 while True:
     print("\n==== SIMPLE CHAT SIMULATOR ====")
     print("1. Send Message")
@@ -71,7 +71,7 @@ while True:
         show_user_messages(user)
 
     elif choice == "5":
-        print("👋 Exiting chat. Goodbye!")
+        print(" Exiting chat. Goodbye!")
         break
     else:
-        print("❌ Invalid choice! Try again.")
+        print(" Invalid choice! Try again.")
